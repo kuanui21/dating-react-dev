@@ -1,0 +1,73 @@
+/* src/components/RangeSlider.css */
+
+/* 性別按鈕的樣式 */
+.gender-options-container {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    /* overflow: hidden; */
+}
+
+.gender-button {
+    flex: 1;
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.gender-button:not(:last-child) {
+    border-right: 1px solid #eee;
+    /* 按鈕之間的分隔線 */
+}
+
+/* 啟用時的顏色 */
+.gender-button.active {
+    background-color: #ff5864;
+    color: white;
+}
+
+/* 非啟用狀態下的效果 */
+.gender-button:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+
+
+/* 距離拉霸的樣式 */
+.distance-range-slider {
+    width: 100%;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 4px;
+    outline: none;
+    transition: background 0.2s ease;
+}
+
+.distance-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    border: 2px solid #ff5864;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+}
+
+.distance-range-slider::-moz-range-thumb,
+.distance-range-slider::-ms-thumb {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    border: 2px solid #ff5864;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+}
+

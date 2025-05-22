@@ -1,0 +1,131 @@
+/* src/index.css */
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  /* 使用更常見的字體 */
+  background-color: #f4f4f4;
+  /* 更柔和的背景色 */
+  color: #333;
+  /* 基本文字顏色 */
+  line-height: 1.6;
+  /* 改善文字可讀性 */
+  -webkit-font-smoothing: antialiased;
+  /* 使字體在 WebKit 瀏覽器中更平滑 */
+  -moz-osx-font-smoothing: grayscale;
+  /* 使字體在 Firefox 中更平滑 */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* 確保 root 元素至少佔滿整個視窗高度 */
+}
+
+main {
+  flex: 1;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.page-layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 容器樣式 */
+.container {
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* h1,
+h2,
+h3 {
+  color: #ff5864;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+} */
+
+/* 連結樣式 */
+a {
+  /* color: #007bff; */
+  /* 藍色連結顏色 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  /* color: #0056b3; */
+  /* 滑鼠懸停時的連結顏色 */
+  /* text-decoration: underline; */
+}
+
+/* 按鈕基本樣式 */
+/* button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+
+.primary-button {
+  background-color: #ff5864;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #e0404d;
+}
+
+.secondary-button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.secondary-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* 輸入框基本樣式 */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* font-size: 1em; */
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 480px;
+  }
+}
