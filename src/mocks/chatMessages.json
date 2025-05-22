@@ -2,7 +2,7 @@
     {
         "id": "10",
         "senderName": "Eric",
-        "img": "/public/sender/Eric.jpg",
+        "img": "/sender/Eric.jpg",
         "unread": 1,
         "messages": [
             {
@@ -40,7 +40,7 @@
     {
         "id": "11",
         "senderName": "Hans",
-        "img": "/public/sender/Hans.jpg",
+        "img": "/sender/Hans.jpg",
         "unread": 0,
         "messages": [
             {
@@ -72,7 +72,7 @@
     {
         "id": "12",
         "senderName": "Sandy",
-        "img": "/public/sender/Sandy.jpg",
+        "img": "/sender/Sandy.jpg",
         "unread": 0,
         "messages": [
             {
@@ -98,7 +98,7 @@
     {
         "id": "13",
         "senderName": "Yuyi",
-        "img": "/public/sender/Yuyi.jpg",
+        "img": "/sender/Yuyi.jpg",
         "unread": 1,
         "messages": [
             {
@@ -112,7 +112,7 @@
     {
         "id": "14",
         "senderName": "Martin",
-        "img": "/public/sender/Martin.jpg",
+        "img": "/sender/Martin.jpg",
         "unread": 1,
         "messages": [
             {
@@ -138,7 +138,7 @@
     {
         "id": "15",
         "senderName": "Oscar",
-        "img": "/public/sender/Oscar.jpg",
+        "img": "/sender/Oscar.jpg",
         "unread": 0,
         "messages": [
             {

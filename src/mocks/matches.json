@@ -5,28 +5,28 @@
         "bio": "我的人生目標是收集來自世界各地的咖啡杯。目前進度：17個。想一起加入我的收藏之旅嗎？",
         "photos": [
             {
-                "url": "/public/Alice/alice1.jpg"
+                "url": "/Alice/alice1.jpg"
             },
             {
-                "url": "/public/Alice/alice2.jpg"
+                "url": "/Alice/alice2.jpg"
             },
             {
-                "url": "/public/Alice/alice3.jpg"
+                "url": "/Alice/alice3.jpg"
             },
             {
-                "url": "/public/Alice/alice4.jpg"
+                "url": "/Alice/alice4.jpg"
             },
             {
-                "url": "/public/Alice/alice5.jpg"
+                "url": "/Alice/alice5.jpg"
             },
             {
-                "url": "/public/Alice/alice6.jpg"
+                "url": "/Alice/alice6.jpg"
             },
             {
-                "url": "/public/Alice/alice7.jpg"
+                "url": "/Alice/alice7.jpg"
             },
             {
-                "url": "/public/Alice/alice8.jpg"
+                "url": "/Alice/alice8.jpg"
             }
         ],
         "birth_date": "1995-05-10",
@@ -69,16 +69,16 @@
         "bio": "自詡為披薩鑑賞家。認真尋找能一起挑戰全台灣披薩店的夥伴。🍕",
         "photos": [
             {
-                "url": "/public/Bob/bob1.jpg"
+                "url": "/Bob/bob1.jpg"
             },
             {
-                "url": "/public/Bob/bob2.jpg"
+                "url": "/Bob/bob2.jpg"
             },
             {
-                "url": "/public/Bob/bob3.jpg"
+                "url": "/Bob/bob3.jpg"
             },
             {
-                "url": "/public/Bob/bob4.jpg"
+                "url": "/Bob/bob4.jpg"
             }
         ],
         "birth_date": "1992-11-22",
@@ -118,19 +118,19 @@
         "bio": "鍵盤聲是我的交響樂。尋找能一起參加程式設計馬拉松的靈魂伴侶。💻🎶",
         "photos": [
             {
-                "url": "/public/Charlie/charlie1.jpg"
+                "url": "/Charlie/charlie1.jpg"
             },
             {
-                "url": "/public/Charlie/charlie2.jpg"
+                "url": "/Charlie/charlie2.jpg"
             },
             {
-                "url": "/public/Charlie/charlie3.jpg"
+                "url": "/Charlie/charlie3.jpg"
             },
             {
-                "url": "/public/Charlie/charlie4.jpg"
+                "url": "/Charlie/charlie4.jpg"
             },
             {
-                "url": "/public/Charlie/charlie5.jpg"
+                "url": "/Charlie/charlie5.jpg"
             }
         ],
         "birth_date": "1998-03-01",
@@ -173,19 +173,19 @@
         "bio": "熱愛閱讀、爬山和探索新的咖啡廳。尋找有共同興趣的朋友一起分享生活。",
         "photos": [
             {
-                "url": "/public/Diana/diana1.jpg"
+                "url": "/Diana/diana1.jpg"
             },
             {
-                "url": "/public/Diana/diana2.jpg"
+                "url": "/Diana/diana2.jpg"
             },
             {
-                "url": "/public/Diana/diana3.jpg"
+                "url": "/Diana/diana3.jpg"
             },
             {
-                "url": "/public/Diana/diana4.jpg"
+                "url": "/Diana/diana4.jpg"
             },
             {
-                "url": "/public/Diana/diana5.jpg"
+                "url": "/Diana/diana5.jpg"
             }
         ],
         "birth_date": "1997-08-25",
@@ -229,13 +229,13 @@
         "bio": "喜歡健身和嘗試各種不同的美食。想找個能一起學習新事物、享受生活的朋友。",
         "photos": [
             {
-                "url": "/public/Ethan/ethan1.jpg"
+                "url": "/Ethan/ethan1.jpg"
             },
             {
-                "url": "/public/Ethan/ethan2.jpg"
+                "url": "/Ethan/ethan2.jpg"
             },
             {
-                "url": "/public/Ethan/ethan3.jpg"
+                "url": "/Ethan/ethan3.jpg"
             }
         ],
         "birth_date": "1993-01-12",
@@ -273,13 +273,13 @@
         "bio": "熱愛烹飪、瑜珈和園藝。希望能找到對生活充滿熱情、享受簡單美好的朋友。",
         "photos": [
             {
-                "url": "/public/Grace/grace1.jpg"
+                "url": "/Grace/grace1.jpg"
             },
             {
-                "url": "/public/Grace/grace2.jpg"
+                "url": "/Grace/grace2.jpg"
             },
             {
-                "url": "/public/Grace/grace3.jpg"
+                "url": "/Grace/grace3.jpg"
             }
         ],
         "birth_date": "1997-09-01",
@@ -319,7 +319,7 @@
         "bio": "喜歡閱讀科幻小說和研究歷史。想找個能一起探索知識、分享想法的朋友。",
         "photos": [
             {
-                "url": "/public/Liam/liam1.jpg"
+                "url": "/Liam/liam1.jpg"
             }
         ],
         "birth_date": "1992-03-15",
@@ -357,10 +357,10 @@
         "bio": "對藝術、設計和咖啡充滿熱情。希望能遇到有品味、有想法的朋友。",
         "photos": [
             {
-                "url": "/public/Olivia/olivia1.jpg"
+                "url": "/Olivia/olivia1.jpg"
             },
             {
-                "url": "/public/Olivia/olivia2.jpg"
+                "url": "/Olivia/olivia2.jpg"
             }
         ],
         "birth_date": "1996-07-28",
@@ -400,13 +400,13 @@
         "bio": "熱愛旅行和攝影。希望找到有共同興趣、能一起探索世界的朋友。",
         "photos": [
             {
-                "url": "/public/Sophia/sophia1.jpg"
+                "url": "/Sophia/sophia1.jpg"
             },
             {
-                "url": "/public/Sophia/sophia2.jpg"
+                "url": "/Sophia/sophia2.jpg"
             },
             {
-                "url": "/public/Sophia/sophia3.jpg"
+                "url": "/Sophia/sophia3.jpg"
             }
         ],
         "birth_date": "1995-05-20",
@@ -444,10 +444,10 @@
         "bio": "我是一名熱愛編程和探索新技術的網站工程師，對前端框架和效能優化充滿熱情。空閒時喜歡研究開源專案，也樂於分享技術心得。",
         "photos": [
             {
-                "url": "/public/sender/Eric.jpg"
+                "url": "/sender/Eric.jpg"
             },
             {
-                "url": "/public/sender/eric2.jpg"
+                "url": "/sender/eric2.jpg"
             }
         ],
         "birth_date": "1993-04-15",
@@ -484,10 +484,10 @@
         "bio": "咖啡的香氣和貓咪的陪伴是我生活的調劑。我喜歡在咖啡廳裡閱讀、寫作，也愛和我的貓咪玩耍。尋找能一起享受簡單幸福的朋友。",
         "photos": [
             {
-                "url": "/public/sender/Hans.jpg"
+                "url": "/sender/Hans.jpg"
             },
             {
-                "url": "/public/sender/hans2.jpg"
+                "url": "/sender/hans2.jpg"
             }
         ],
         "birth_date": "1994-09-01",
@@ -528,10 +528,10 @@
         "bio": "山野是我第二個家，攝影是我的眼睛。喜歡用鏡頭捕捉大自然的美麗，也愛用雙腳丈量每一寸土地。希望能與你一同探索台灣的秘境。",
         "photos": [
             {
-                "url": "/public/sender/Sandy.jpg"
+                "url": "/sender/Sandy.jpg"
             },
             {
-                "url": "/public/sender/sandy2.jpg"
+                "url": "/sender/sandy2.jpg"
             }
         ],
         "birth_date": "1996-03-20",
@@ -573,10 +573,10 @@
         "bio": "生活需要儀式感，也需要一點冒險精神。喜歡嘗試新的咖啡店、手作烘焙，也愛隨性踏上一段未知的旅程。尋找能一起創造美好回憶的朋友。",
         "photos": [
             {
-                "url": "/public/sender/Yuyi.jpg"
+                "url": "/sender/Yuyi.jpg"
             },
             {
-                "url": "/public/sender/yuyi2.jpg"
+                "url": "/sender/yuyi2.jpg"
             }
         ],
         "birth_date": "1998-07-10",
@@ -618,10 +618,10 @@
         "bio": "我熱愛戶外運動，特別是騎自行車！",
         "photos": [
             {
-                "url": "/public/sender/Martin.jpg"
+                "url": "/sender/Martin.jpg"
             },
             {
-                "url": "/public/sender/martin2.jpg"
+                "url": "/sender/martin2.jpg"
             }
         ],
         "birth_date": "1991-02-28",
@@ -658,7 +658,7 @@
         "bio": "我喜歡透過運動來保持身心平衡，尤其熱愛籃球和跑步。同時，我也對美食有著不懈的追求，總是在尋找新的餐廳和獨特的料理。希望能找到一位能與我共享運動樂趣和美食探索的夥伴。",
         "photos": [
             {
-                "url": "/public/sender/Oscar.jpg"
+                "url": "/sender/Oscar.jpg"
             }
         ],
         "birth_date": "1992-06-05",
