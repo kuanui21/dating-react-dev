@@ -192,7 +192,7 @@ function MatchCard({ user, onSwiped, myLocation, enableSwipe, showReturnToMessag
             ) : (
                 user && (
                     <div className="sticky bottom-0 w-full h-24 bg-gradient-to-b from-transparent
-                                    via-gray-200/90 to-gray-300 z-50 justify-center items-end pb-8 hidden md:flex">
+                                    via-gray-200/90 to-gray-300 z-50 justify-center items-end pb-8 flex">
                         <div className="flex gap-8">
                             <button
                                 className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md
