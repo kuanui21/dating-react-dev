@@ -1,4 +1,5 @@
 import { FaRegMessage } from "react-icons/fa6";
+import { getPublicAssetUrl } from '../utils/assetPaths';
 
 function MessageList({ messages, onSelectChat }) {
     return (
@@ -15,7 +16,7 @@ function MessageList({ messages, onSelectChat }) {
                         <div className="w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center mr-2 overflow-hidden flex-shrink-0">
                             <img
                                 key={`messageImg_${message.id}`}
-                                src={message.img}
+                                src={getPublicAssetUrl(message.img)}
                                 alt={message.senderName}
                                 className="w-full h-full object-cover rounded-full"
                             />

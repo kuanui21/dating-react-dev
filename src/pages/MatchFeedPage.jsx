@@ -10,6 +10,7 @@ import MobileNavbar from '../components/MobileNavbar.jsx';
 
 import { FilterContext } from '../context/FilterContext.jsx';
 import { calculateAge } from '../utils/ageUtils';
+import { getPublicAssetUrl } from '../utils/assetPaths';
 
 function MatchFeedPage() {
     const navigate = useNavigate();
@@ -241,7 +242,7 @@ function MatchFeedPage() {
                         <div className="relative inline-block mb-4">
                             <div className="w-24 h-24 rounded-full border-4 border-red-300 overflow-hidden mx-auto shadow-md">
                                 <img
-                                    src={matchedUser.photos[0].url}
+                                    src={getPublicAssetUrl(matchedUser.photos[0].url)}
                                     alt={matchedUser.name}
                                     className="w-full h-full object-cover"
                                 />

@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { FaUser, FaSlidersH, FaComments, FaUsers } from "react-icons/fa";
 
+import { getPublicAssetUrl } from '../utils/assetPaths';
 import MessageList from '../components/MessageList.jsx';
 // import MobileNavbar from '../components/MobileNavbar.jsx';
 import { ChatContext } from '../context/ChatContext.jsx';
@@ -41,7 +42,7 @@ function Sidebar({ myData, activeTab }) {
                 <div className="w-20 h-20 mx-auto rounded-full overflow-hidden">
                     <img
                         key={`userImg_${myData.id}`}
-                        src={myData.photos[0].url}
+                        src={getPublicAssetUrl(myData.photos[0].url)}
                         alt={myData.name}
                         className="w-full h-full object-cover"
                     />

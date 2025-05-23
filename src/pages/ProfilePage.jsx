@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getPublicAssetUrl } from '../utils/assetPaths';
 
 import axios from 'axios';
 import useIsMobile from "../hooks/useIsMobile.jsx";
@@ -158,7 +159,8 @@ function ProfilePage() {
                             <label htmlFor="photos" className="block font-bold mb-1.5 text-gray-800">照片:</label>
                             <div className="mt-2 flex flex-wrap gap-2.5">
                                 {(profile.photos || []).map((photo, index) => (
-                                    <img key={index} src={photo.url} alt={`照片 ${index + 1}`} className="w-[100px] h-[100px] mr-2.5 object-cover rounded-md" />
+                                    <img key={index} src={getPublicAssetUrl(photo.url)} alt={`照片 ${index + 1}`}
+                                        className="w-[100px] h-[100px] mr-2.5 object-cover rounded-md" />
                                 ))}
                             </div>
                             <input type="file" id="photos" multiple

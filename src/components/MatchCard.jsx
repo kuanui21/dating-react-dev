@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import axios from 'axios';
 import { calculateDistance } from '../utils/distanceUtils';
+import { getPublicAssetUrl } from '../utils/assetPaths';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { FaStar, FaHeart, FaX } from "react-icons/fa6";
 
@@ -123,7 +124,7 @@ function MatchCard({ user, onSwiped, myLocation, enableSwipe, showReturnToMessag
                                 </button>
                                 <img
                                     key={`img_${user.id}`}
-                                    src={user.photos[(currentPhotoIndex % user.photos.length + user.photos.length) % user.photos.length].url || 'https://placehold.co/400x600?text=NO%20PHOTO'}
+                                    src={getPublicAssetUrl(user.photos[(currentPhotoIndex % user.photos.length + user.photos.length) % user.photos.length].url) || 'https://placehold.co/400x600?text=NO%20PHOTO'}
                                     alt={user.name}
                                     className="w-full h-full object-cover bg-white"
                                     onError={(e) => {

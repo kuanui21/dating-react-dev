@@ -9,6 +9,6 @@ export default defineConfig(({ command }) => {
       react(),
       tailwindcss(),
     ],
-    base: command === 'build' ? '/dating-react-dev/' : '/',
+    base: process.env.NODE_ENV === 'production' ? '/dating-react-dev/' : '/',
   };
 });

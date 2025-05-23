@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import useIsMobile from '../hooks/useIsMobile';
 import { FaTimes, FaPaperPlane } from 'react-icons/fa';
+import { getPublicAssetUrl } from '../utils/assetPaths';
+import useIsMobile from '../hooks/useIsMobile';
 
 function ChatBox({ chat, onCloseChat, onSendMessage, onViewMatchCard }) {
     const [messageInput, setMessageInput] = useState('');
@@ -48,7 +49,7 @@ function ChatBox({ chat, onCloseChat, onSendMessage, onViewMatchCard }) {
                         onClick={() => onViewMatchCard(chat.id)} // 點擊時觸發事件，傳遞聊天對象的 ID
                     >
                         <img
-                            src={chat.img}
+                            src={getPublicAssetUrl(chat.img)}
                             alt={chat.senderName}
                             className="w-10 h-10 rounded-full mr-3 object-cover"
                         />
