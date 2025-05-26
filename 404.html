@@ -7,15 +7,22 @@
     <script type="text/javascript">
         var REPO_NAME = '/dating-react-dev';
         var currentPathname = window.location.pathname;
+        var targetPathname = currentPathname;
 
         // 移除所有重複的 REPO_NAME 前綴
         while (targetPathname.startsWith(REPO_NAME + REPO_NAME)) {
             targetPathname = targetPathname.substring(REPO_NAME.length);
         }
 
-        var redirectUrl = window.location.protocol + '//' + window.location.host + targetPathname;
+        // 如果清理後的路徑不以 REPO_NAME 開頭，則添加它
+        if (!targetPathname.startsWith(REPO_NAME)) {
+            targetPathname = REPO_NAME + targetPathname;
+        }
 
-        // 步驟 3: 只有當目標 URL 與當前 URL 不同時才進行重定向，防止無限迴圈
+        // 構建最終的重定向 URL
+        var redirectUrl = window.location.origin + targetPathname;
+
+        // 只有當目標 URL 與當前 URL 不同時才進行重定向，防止無限迴圈
         if (currentPathname !== targetPathname) {
             window.location.replace(redirectUrl);
         }
@@ -24,7 +31,7 @@
 
 <body>
     <h1>Redirecting...</h1>
-    <p>If you are not redirected automatically, follow this <a id="redirectLink" href="#">link</a>.</p>
+    <p>如果頁面沒有自動跳轉，請點擊此<a id="redirectLink" href="#">連結</a>。</p>
     <script type="text/javascript">
         document.getElementById('redirectLink').href = redirectUrl;
     </script>
