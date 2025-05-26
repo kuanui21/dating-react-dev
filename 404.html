@@ -6,34 +6,60 @@
     <title>Redirecting...</title>
     <script type="text/javascript">
         var REPO_NAME = '/dating-react-dev';
-        var currentPathname = window.location.pathname;
-        var targetPathname = currentPathname;
+        var currentPath = window.location.pathname;
+        var hash = window.location.hash;
+        
+        // GitHub Pages SPA 重定向邏輯
+        function handleSPARedirect() {
+            var targetPath;
 
-        // 移除所有重複的 REPO_NAME 前綴
-        while (targetPathname.startsWith(REPO_NAME + REPO_NAME)) {
-            targetPathname = targetPathname.substring(REPO_NAME.length);
-        }
+            // 如果已經在正確的基礎路徑下，直接跳轉到 React 應用
+            if (currentPath.startsWith(REPO_NAME + '/') || currentPath === REPO_NAME) {
+                targetPath = currentPath;
+            } else {
+                // 如果是根路徑，重定向到基礎路徑
+                if (currentPath === '/' || currentPath === '') {
+                    targetPath = REPO_NAME + '/';
+                } else {
+                    // 其他情況：將當前路徑附加到基礎路徑後
+                    // 移除開頭的 / 避免雙斜線
+                    var cleanPath = currentPath.startsWith('/') ? currentPath.substring(1) : currentPath;
+                    targetPath = REPO_NAME + '/' + cleanPath;
+                }
+            }
 
-        // 如果清理後的路徑不以 REPO_NAME 開頭，則添加它
-        if (!targetPathname.startsWith(REPO_NAME)) {
-            targetPathname = REPO_NAME + targetPathname;
-        }
+            // 構建最終 URL
+            var redirectUrl = window.location.origin + targetPath + hash;
 
-        // 構建最終的重定向 URL
-        var redirectUrl = window.location.origin + targetPathname;
+            console.log('Redirecting to:', redirectUrl);
 
-        // 只有當目標 URL 與當前 URL 不同時才進行重定向，防止無限迴圈
-        if (currentPathname !== targetPathname) {
+            // 立即重定向到 React 應用
             window.location.replace(redirectUrl);
         }
+
+        // 執行重定向
+        handleSPARedirect();
     </script>
 </head>
 
 <body>
-    <h1>Redirecting...</h1>
-    <p>如果頁面沒有自動跳轉，請點擊此<a id="redirectLink" href="#">連結</a>。</p>
+    <h1>重定向中...</h1>
+    <p>如果頁面沒有自動跳轉，請點擊 <a id="redirectLink" href="#">此連結</a>。</p>
     <script type="text/javascript">
-        document.getElementById('redirectLink').href = redirectUrl;
+        // 設定手動連結
+        var manualRedirectUrl = window.location.origin + REPO_NAME + '/';
+        document.getElementById('redirectLink').href = manualRedirectUrl;
+
+        // 如果 2 秒後還沒跳轉，顯示錯誤訊息
+        setTimeout(function () {
+            if (document.body) {
+                var errorMsg = document.createElement('p');
+                errorMsg.innerHTML = '自動跳轉失敗，請手動點擊上方連結，或 <a href="' + manualRedirectUrl + '">點擊這裡</a> 回到首頁。';
+                errorMsg.style.color = 'red';
+                errorMsg.style.marginTop = '20px';
+                document.body.appendChild(errorMsg);
+            }
+        }, 2000);
     </script>
 </body>
 
