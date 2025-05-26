@@ -12,7 +12,7 @@ function MessageList({ messages, onSelectChat }) {
                 {messages.map(message => (
                     <li key={message.id}
                         onClick={() => onSelectChat(message)}
-                        className={`flex items-center py-4 border-b border-gray-200 last:border-b-0 px-5 hover:bg-gray-100 `}>
+                        className={`flex items-center py-4 border-b border-gray-200 last:border-b-0 px-5 hover:bg-gray-100 cursor-pointer`}>
                         <div className="w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center mr-2 overflow-hidden flex-shrink-0">
                             <img
                                 key={`messageImg_${message.id}`}

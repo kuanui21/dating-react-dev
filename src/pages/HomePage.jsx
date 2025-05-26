@@ -1,4 +1,5 @@
 import homeBackgroundImage from '../assets/home.jpg';
+import homeBackgroundImage2 from '../assets/home2.jpg';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
@@ -31,7 +32,7 @@ function HomePage() {
             <div className="w-full bg-white bg-opacity-80 backdrop-blur-sm py-12 px-6 text-center 
                     md:flex md:items-center md:justify-around">
                 <div className="mt-8 md:mt-0 md:w-1/2">
-                    <img src="/src/assets/home2.jpg" alt="主要特" className="rounded-3xl shadow-md" />
+                    <img src={homeBackgroundImage2} alt="主要特" className="rounded-3xl shadow-md" />
                 </div>
                 <div className="mt-8 md:mt-0 md:w-1/2">
                     <h2 className="text-red-400 text-3xl my-6 font-semibold">主要特色</h2>
