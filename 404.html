@@ -5,26 +5,35 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-        var REPO_NAME = '/dating-react-dev';
-        var currentPathname = window.location.pathname;
-        var targetPathname = currentPathname;
+        var REPO_BASE_PATH = '/dating-react-dev';
 
-        // 移除所有重複的 REPO_NAME 前綴
-        while (targetPathname.startsWith(REPO_NAME + REPO_NAME)) {
-            targetPathname = targetPathname.substring(REPO_NAME.length);
+        var l = window.location;
+        var currentPathname = l.pathname;
+        var query = l.search;
+        var hash = l.hash;
+
+        var targetPathname;
+
+        // 如果當前路徑已經包含基礎路徑，則從基礎路徑後開始提取子路徑
+        if (currentPathname.startsWith(REPO_BASE_PATH)) {
+            var subPath = currentPathname.substring(REPO_BASE_PATH.length);
+            // 確保子路徑以 '/' 開頭，但避免雙斜線，例如 /dating-react-dev//match-feed
+            targetPathname = REPO_BASE_PATH + (subPath.startsWith('/') ? '' : '/') + subPath;
+        } else {
+            // 如果不包含基礎路徑 (例如直接訪問根域下的子路徑)，則直接將基礎路徑與當前路徑拼接
+            // 這通常是為了處理非 /dating-react-dev 開頭的 404
+            targetPathname = REPO_BASE_PATH + currentPathname;
         }
 
-        // 如果清理後的路徑不以 REPO_NAME 開頭，則添加它
-        if (!targetPathname.startsWith(REPO_NAME)) {
-            targetPathname = REPO_NAME + targetPathname;
-        }
+        // 將處理後的路徑作為查詢參數值傳遞，並添加特殊標記 '?/'
+        var redirectUrl = l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
+            targetPathname.replace(/\/$/, '') + '/?/' + // 移除尾部斜線再添加特殊標記
+            (query ? query.slice(1).replace(/&/g, "~and~") : '') + // 原始查詢參數
+            hash; // 原始 hash
 
-        // 構建最終的重定向 URL
-        var redirectUrl = window.location.origin + targetPathname;
-
-        // 只有當目標 URL 與當前 URL 不同時才進行重定向，防止無限迴圈
-        if (currentPathname !== targetPathname) {
-            window.location.replace(redirectUrl);
+        // 避免無限迴圈：只有在當前 URL 與目標 URL 不同時才進行重定向
+        if (l.href !== redirectUrl) {
+            l.replace(redirectUrl);
         }
     </script>
 </head>
