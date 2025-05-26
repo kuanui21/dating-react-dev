@@ -5,16 +5,20 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-        var path = window.location.pathname;
-        path = path.startsWith('/') ? path : '/' + path;
+        var REPO_NAME = '/dating-react-dev';
+        var currentPathname = window.location.pathname;
 
-        var host = window.location.hostname;
+        // 移除所有重複的 REPO_NAME 前綴
+        while (targetPathname.startsWith(REPO_NAME + REPO_NAME)) {
+            targetPathname = targetPathname.substring(REPO_NAME.length);
+        }
 
-        var basePath = '/dating-react-dev';
-        var redirectUrl = 'https://' + host + path;
+        var redirectUrl = window.location.protocol + '//' + window.location.host + targetPathname;
 
-        // 重定向到正確的 URL
-        window.location.replace(redirectUrl);
+        // 步驟 3: 只有當目標 URL 與當前 URL 不同時才進行重定向，防止無限迴圈
+        if (currentPathname !== targetPathname) {
+            window.location.replace(redirectUrl);
+        }
     </script>
 </head>
 
