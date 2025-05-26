@@ -1,14 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/dating-react-dev/icon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>我們的交友平台</title>
-    <script type="module" crossorigin src="/dating-react-dev/assets/index-oM0G8sVX.js"></script>
-    <link rel="stylesheet" crossorigin href="/dating-react-dev/assets/index-c2NrwOJ4.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/dating-react-dev/icon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我們的交友平台</title>
+
+  <script type="text/javascript">
+    // 處理 GitHub Pages 重定向的特殊查詢參數
+    (function (l) {
+      // 檢查 URL 是否包含來自 404.html 的特殊查詢參數 '?/'
+      if (l.search && l.search.startsWith("?/")) {
+        // 提取並解碼原始路徑（移除 '?/' 及還原 ~and~）
+        var decodedPath = l.search
+          .slice(2)
+          .replace(/~and~/g, "&");
+
+        // 構建最終乾淨的 URL 路徑
+        // 如果是 /dating-react-dev/?/ -> /dating-react-dev/
+        // 如果是 /dating-react-dev/?/match-feed -> /dating-react-dev/match-feed
+        var newPath = l.pathname.replace(/\/$/, '') + '/' + decodedPath;
+
+        // 使用 History API 無感地更新瀏覽器 URL，不觸發頁面重新載入
+        window.history.replaceState(null, null, newPath + l.hash);
+      }
+    })(window.location);
+  </script>
+  <script type="module" crossorigin src="/dating-react-dev/assets/index-Cv-y8Hun.js"></script>
+  <link rel="stylesheet" crossorigin href="/dating-react-dev/assets/index-D3-sbBTO.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>
